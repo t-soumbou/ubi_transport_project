@@ -1,6 +1,6 @@
 # User specific & automatically generated files #
 #################################################
-/app/Config
+app/Config
 /app/Console
 /app/Lib
 /app/Locale
@@ -20,7 +20,7 @@
 /CONTRIBUTING.md
 /build.xml
 /build.proprties
-/index.
+/index.php
 /composer.json
 /.htacces
 /plugins
