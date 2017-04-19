@@ -5,10 +5,10 @@
 </div>
 <?php
 
-echo $this->Form->create('Note');
-  echo $this->Form->input('Etudiant_id',array('type' => 'int', 'default' => $etudiant));
-   echo $this->Form->input('Matiere');
-    echo $this->Form->input('Evaluation');
+echo $this->Form->create('note');
+  echo $this->Form->input('etudiant_id',array('type' => 'int', 'default' => $etudiant));
+   echo $this->Form->input('matiere');
+    echo $this->Form->input('evaluation');
 
 echo $this->Form->end('Submit');
 ?>

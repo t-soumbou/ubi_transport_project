@@ -1,0 +1,22 @@
+
+
+ CREATE DATABASE gestion_ecole;
+ USE gestion_ecole;
+
+ CREATE TABLE etudiants
+ (
+ 	id 				integer AUTO_INCREMENT,
+ 	nom 			varchar(30),
+ 	prenom          varchar(30),
+ 	date_de_naissance  DATE NOT NULL,
+ 	constraint ETUDIANTS_PK primary key (id)
+ );
+ CREATE TABLE notes
+ (
+  etudiant_id      			integer,
+  matiere 			varchar(30),
+  evaluation		integer,
+  constraint NOTES_PK primary key (etudiant_id, matiere, evaluation)
+ );
+
+

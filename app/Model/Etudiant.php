@@ -2,11 +2,11 @@
 		
 Class Etudiant extends AppModel{
 
-	var $name="Etudiant";
+	var $name="etudiant";
 
 	public $hasMany = array(
-       		 'Note' => array(
-            'className' => 'Note',
+       		 'note' => array(
+            'className' => 'note',
         )
     );	
 }

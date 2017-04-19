@@ -2,7 +2,7 @@
 		
 		Class Note extends AppModel{
 
-			var $name="Note";
+			var $name="note";
 	
 		}
 

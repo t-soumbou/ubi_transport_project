@@ -6,9 +6,9 @@
 </div>
 <?php
 
-echo $this->Form->create('Etudiant');
-    echo $this->Form->input('Nom');
-    echo $this->Form->input('Prenom');
-    echo $this->Form->input('Date_de_naissance',array('type'=>'date'));   
+echo $this->Form->create('etudiant');
+    echo $this->Form->input('nom');
+    echo $this->Form->input('prenom');
+    echo $this->Form->input('date_de_naissance',array('type'=>'date'));   
 echo $this->Form->end('Submit');
 ?>

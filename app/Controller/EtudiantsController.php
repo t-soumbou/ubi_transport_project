@@ -3,18 +3,18 @@
 
 class EtudiantsController extends AppController
 {
-	var $name= "Etudiant";
+	var $name= "etudiant";
 
 // liste des eleves
 	public function index(){
-		$etudiants = $this->Etudiant -> find('all');
+		$etudiants = $this->etudiant -> find('all');
 		$this->set('etudiants',$etudiants);	 	
 	}
 
 //ajouter un eleve
 	public function add(){
 		if ($this->request->is('post')){
-            if ($this->Etudiant->save($this->request->data)){
+            if ($this->etudiant->save($this->request->data)){
                 $this->Flash->success(__('Etudiant a été crée.'));
                 $this->redirect(array('action' => 'index'));
                 
@@ -33,14 +33,14 @@ class EtudiantsController extends AppController
                     throw new NotFoundException(__('veuillez renseigner un identifiant'));
                 }
 
-                $etudiant = $this->Etudiant->findById($id);
+                $etudiant = $this->etudiant->findById($id);
                 if (!$etudiant) {
                     throw new NotFoundException(__('l\'etudiant n\'existe pas'));
                 }
 
                 if ($this->request->is(array('post', 'put'))) {
-                    $this->Etudiant->id = $id;
-                    if ($this->Etudiant->save($this->request->data)) {
+                    $this->etudiant->id = $id;
+                    if ($this->etudiant->save($this->request->data)) {
                         $this->Flash->success(__('mis à jour effectuée'));
                         return $this->redirect(array('action' => 'index'));
                     }
@@ -59,7 +59,7 @@ class EtudiantsController extends AppController
                 throw new MethodNotAllowedException();
             }
 
-            if ($this->Etudiant->delete($id)) {
+            if ($this->etudiant->delete($id)) {
                 $this->Flash->success(
                     __('L\'etudiant a été supprimé.')
                 );
@@ -78,7 +78,7 @@ class EtudiantsController extends AppController
                 }
                 $this->set('etudiant',$etudiant_id);  
                 if ($this->request->is(array('post', 'put'))) {
-                     if ($this->Etudiant->Note->save($this->request->data)) {
+                     if ($this->etudiant->note->save($this->request->data)) {
                         $this->Flash->success(__('Eleve noté'));
                         return $this->redirect(array('action' => 'index'));
                     }else{

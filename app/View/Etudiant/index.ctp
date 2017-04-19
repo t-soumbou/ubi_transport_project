@@ -15,15 +15,15 @@
     foreach( $etudiants as $etudiant ){
     
         echo "<tr>";
-            echo "<td>{$etudiant['Etudiant']['id']}</td>";
-            echo "<td>{$etudiant['Etudiant']['Nom']}</td>";
-            echo "<td>{$etudiant['Etudiant']['Prenom']}</td>";
-            echo "<td>{$etudiant['Etudiant']['Date_de_naissance']}</td>";
+            echo "<td>{$etudiant['etudiant']['id']}</td>";
+            echo "<td>{$etudiant['etudiant']['nom']}</td>";
+            echo "<td>{$etudiant['etudiant']['prenom']}</td>";
+            echo "<td>{$etudiant['etudiant']['date_de_naissance']}</td>";
             
             echo "<td class='actions'>";
-                echo $this->Html->link( 'Noter', array('action' => 'noter', $etudiant['Etudiant']['id']));
-                echo $this->Html->link( 'modifier', array('action' => 'edit', $etudiant['Etudiant']['id']));
-                echo $this->Form->postLink( 'supprimer', array('action' => 'delete',$etudiant['Etudiant']['id']), array(
+                echo $this->Html->link( 'Noter', array('action' => 'noter', $etudiant['etudiant']['id']));
+                echo $this->Html->link( 'modifier', array('action' => 'edit', $etudiant['etudiant']['id']));
+                echo $this->Form->postLink( 'supprimer', array('action' => 'delete',$etudiant['etudiant']['id']), array(
                             'confirm'=>'Etes-vous sur de vouloir supprimer cet eleve ?'));
             echo "</td>";
         echo "</tr>";
